@@ -1,0 +1,49 @@
+Gitの初期設定を行う
+$ git config --global user.name "github903"
+$ git config --global user.email cyber_programmer@aol.com
+
+○ Gitプロジェクト開始
+git の設定を行うディレクトリへ移動して、
+git init　初期化
+ls -a で、表示（隠しファイルとなっている）
+
+ファイルの変更をステージングエリアへ追加
+git add first.txt
+
+ローカルリポジトリにコミット
+git commit
+
+コミットのメッセージ入力画面が起動。コミット・メッセージを編集後、
+
+リポジトリを追加
+https://github.com/　で、[Create repository]をクリック
+repository name を入力して、[Creating repository]をクリック
+
+[…or push an existing repository from the command line] GitへGitHubを登録するに従い、
+コマンド"git remote add origin https://github.com/u903/intro_git.git"　を端末で実行
+$ git remote add origin https://github.com/u903/intro_git.git
+
+リモートリポジトリへプッシュ
+git push -u origin master
+
+https://github.com/settings/tokens
+↑こちらへ移動し、
+Personal access tokens をクリック
+[Generate new token]をクリックしてトークン生成
+New personal access token (classic)
+・Note: Learning
+・90 days
+・repo　にのみ☑を入れて、
+[Generate Token] をクリック。
+
+生成されたTokenをコピーしておき、パスワード入力時に、これをPaste
+
+git push -u origin master
+
+Username for 'https://github.com': u903
+Password for 'https://u903@github.com': ←ここで、TokenをPaste
+
+https://github.com/u903/intro_git
+↑アップロードされた事を確認
+
+
